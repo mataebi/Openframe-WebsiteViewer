@@ -15,16 +15,8 @@ arq=$(uname -m)
 
 if [ $os == "Linux" ]; then
 
-    # on Debian Linux distributions
-    # sudo apt-get update
-    # do we really want to upgrade? this could take a damn long time.
-    # sudo apt-get upgrade
-
     # same for any debian disto (untested), including rpi (tested)
-    sudo apt-get install chromium
-    sudo apt-get install unclutter
-    sudo apt-get install matchbox-window-manager
-    sudo apt-get install xserver-xorg-legacy
+    sudo apt-get update && apt-get install -y chromium unclutter matchbox-window-manager xserver-xorg-legacy
 
     if [ $arq == "armv7l" ] || [ $arq == "armv6l" ]; then
         # on RaspberryPi or other arm 6/7 device
