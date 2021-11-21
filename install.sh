@@ -16,7 +16,7 @@ arq=$(uname -m)
 if [ $os == "Linux" ]; then
 
     # same for any debian disto (untested), including rpi (tested)
-    sudo apt-get update && apt-get install -y chromium unclutter matchbox-window-manager xserver-xorg-legacy
+    sudo apt update && sudo apt install -y chromium unclutter matchbox-window-manager xserver-xorg-legacy
 
     if [ $arq == "armv7l" ] || [ $arq == "armv6l" ]; then
         # on RaspberryPi or other arm 6/7 device
